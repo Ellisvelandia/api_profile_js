@@ -71,3 +71,6 @@ const getCard = async (data) => {
 </div>
   `;
 };
+
+// paswword 490371137608482816
+// email : eyis619@gmail.com
