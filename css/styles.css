@@ -19,10 +19,10 @@ body {
 }
 
 .colombia {
-  width:80px;
+  width: 80px;
   position: absolute;
   top: -9%;
-  left: 90%;  
+  left: 90%;
 }
 
 .colombia:hover {
@@ -53,7 +53,6 @@ body {
   left: 0;
   right: 0;
   background-image: url("../media/background.jpg");
-  opacity: 0.9;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -163,20 +162,59 @@ ul li:hover ~ li {
 
 .btn {
   padding: 0.2rem 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-right: 1rem;
-  border-radius: 30rem;
-  font-size: 1.7rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  -webkit-background-clip: text;
-  color: transparent;
+  width: 120px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  animation: gradient 5s ease infinite;
+  background-size: 400% 400%;
+  border: solid 1 px #f8f2ff;
+  font-size: 18px;
+  position: relative;
+  font-weight: 400;
+  border-radius: 50px;
+  color: #ffffff;
+  transition: all 0.4s ease-in-out;
   background-size: cover;
-  background-image: url("http://apod.nasa.gov/apod/image/0603/coma_misti.jpg");
+  cursor: pointer;
 }
 
-.btn:hover {
-  transform: translateY(-0.25rem);
+.btn .greet {
+  display: block;
+  font-size: 0;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  word-spacing: 2px;
+  width: 100%;
+}
+
+.btn i {
+  position: absolute;
+  top: 35%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  animation: suspension 1s linear infinite;
+}
+
+.btn:active {
+  font-size: 18px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  animation: gradient 8s ease infinite;
+  background-size: 400% 400%;
+  width: 150px;
+  height: 50px;
+  line-height: 1px;
+}
+
+.btn:active .greet {
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 0px;
+}
+
+.btn:active i {
+  font-size: 0;
 }
 
 .btn:active {
@@ -313,6 +351,30 @@ ul li:hover ~ li {
 .musicplayer {
   width: 140px;
   margin: 105px auto 0 auto;
+}
+
+@keyframes suspension {
+  100% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  0% {
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
