@@ -18,6 +18,17 @@ body {
   height: 100vh;
 }
 
+.colombia {
+  width:80px;
+  position: absolute;
+  top: -9%;
+  left: 90%;  
+}
+
+.colombia:hover {
+  transform: scale(1.5);
+}
+
 .aside {
   background-color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0);
